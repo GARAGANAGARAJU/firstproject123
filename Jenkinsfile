@@ -13,7 +13,7 @@ pipeline {
           sh 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 984581412472.dkr.ecr.us-east-2.amazonaws.com'
           sh 'docker build -t project1851 .'
           sh 'docker tag project1851:latest 984581412472.dkr.ecr.us-east-2.amazonaws.com/project1851:""$Build""'
-          sh 'docker push 984581412472.dkr.ecr.us-east-2.amazonaws.com/project1851:latest'
+          sh 'docker push 984581412472.dkr.ecr.us-east-2.amazonaws.com/project1851:""$Build""'
         }
       }
     }
