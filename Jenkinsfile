@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage ('Buid') {
+    stage ('Build') {
       steps {
         sh 'printenv'
         
