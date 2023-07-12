@@ -1,14 +1,14 @@
 pipeline {
   agent any
+   tools {
+      docker "docker"
+    }
   stages {
     stage ('Build') {
       steps {
         sh 'printenv'
         
       }
-    }
-    tools {
-      Docker "docker"
     }
     stage ('Publish ECR') {
       steps {
